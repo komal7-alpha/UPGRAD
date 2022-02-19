@@ -1,0 +1,486 @@
+# Upgrad-Graded-Questions-Part1
+#Data Toolkit
+                              
+                              
+                              ##Python Operators
+What will the output be of ((500//7) % 5) ** 3?
+
+
+1
+
+✓ Correct
+Feedback:
+(500//7) means integer division. Hence, you will get 71.
+71 % 5 will return the remainder when 71 is divided by 5. Hence, you will get 1.
+1 ** 3 will return 1 raised to the third power. Hence, you will get 1.
+
+                          Indexing
+How will you extract ‘love’ from the string S = “I love Python”? (More than one option may be correct.).
+
+S[2:6]
+
+✓ Correct
+Feedback:
+The substring ‘love’ in S starts from index 2 and goes up to index 5. Hence, you need to write ‘S[2:6]’ to extract it, since the last index mentioned, i.e. 6, will be excluded by default.
+
+
+
+S[-11:-7]
+
+✓ Correct
+Feedback:
+Alternatively, you can also use negative indexing in Python, with the last index being ‘-1’. Hence, by using a negative index, you can extract ‘love’ by writing ‘S[-11:-7]’
+
+                  Operator Precedence
+
+What will the output of 3 * 3 ** 3 be?
+
+81
+
+✓ Correct
+Feedback:
+Correct! In precedence order of operators, exponential comes first, hence (3**3) is evaluated first. So you get 3 * 27, i.e. 81.
+
+
+
+                        Tuples
+If you have a tuple T = (3, 5, 7, 11), what will the output of T.append(9) be?
+
+Error
+
+✓ Correct
+Feedback:
+Tuples are immutable, i.e. once a tuple is created, you cannot alter it. This is why if you attempt to append a value to the tuple in the question, Python will throw an error.
+
+
+                      2-D List Indexing
+What will the output of the following program be?
+
+L1 = ['Vikas', 'Akshay', 'Sanskar', 'Mahima']
+print(L1[1][-1])
+
+
+
+                          Appending to a List
+What will the output of the following code be?
+
+l = [32, 34, 12, 27, 33]
+l.append([14, 19])
+print(len(l))
+
+
+6
+
+✓ Correct
+Feedback:
+The append() function appends the two numbers as a list so the new list will now be [32, 34, 12, 27, 33, [14, 19]]. Hence, the new length becomes 6.
+
+
+
+                            Sets
+Which of the following statements is incorrect regarding sets in Python?
+
+Sets are immutable
+
+✓ Correct
+Feedback:
+Correct. Sets are mutable by nature, i.e. their contents can be altered.
+
+
+
+
+
+                            Dictionary Iteration
+What will the output be of the following code?
+
+D = {1:['Raj', 22], 2:['Simran', 21], 3:['Rahul', 40]}
+for val in D:
+     print(val)
+
+1
+2
+3
+
+✓ Correct
+Feedback:
+By default, iteration in a dictionary is done over the keys of the dictionary. Hence, the code will return ‘1, 2, 3’. The name of the variable used for the iteration (‘val’, in this case) is insignificant.
+
+
+                        Python Comprehensions
+What will the ‘comprehension equivalent’ be for the following snippet of code?
+
+for sentence in paragraph:
+    for word in sentence.split():
+        single_word_list.append(word)
+        
+        [word for sentence in paragraph for word in sentence.split()]
+
+✓ Correct
+Feedback:
+[word for sentence in paragraph for word in sentence.split()] is the right comprehension equivalent of the code provided. You need to put it in square brackets [] since the output will be a list.
+
+                              Range Function
+What will the output of the following line of code be?
+
+print(list(range(10, 1, -1)))
+
+[10, 9, 8, 7, 6, 5, 4, 3, 2]
+
+✓ Correct
+Feedback:
+Correct! In this case, you have specified that you need integers from 10 to 1 with each value incrementing by -1 or simply each value decrementing by 1. Hence, you get all the integers in descending order from 10 to 1 excluding 1.
+
+
+     CRICKET FOOTBALL HOCKEY
+ 
+ 
+ All Three
+Which are the students who play all the three sports?
+
+[40, 95]
+
+✓ Correct
+Feedback:
+Correct! When you convert the given lists, (C, F, H) into sets and find their intersection, you get [40, 95].
+
+
+Only Cricket and Hockey
+Which are the players who play both cricket and hockey but don't play football?
+
+[20, 21, 25, 62, 67, 71, 75, 76, 82]
+
+✓ Correct
+Feedback:
+Here you need to find the intersection of C and H. But since that will also include players who play football, you need to explicitly subtract the football players.
+
+
+
+Exactly Two
+How many players play exactly two sports?
+
+
+22
+
+✓ Correct
+Feedback:
+Here, you need to find the people who play exactly two sports. So you need to find out people who play C and F, F and H, and F and C and take their union. But since this will also include the people who play all the three sports, you need to subtract that. The final list, hence turns out to be 22 players long.
+
+
+    None of Them
+Which of these players do not play any of the sport? (More than one option may be correct)
+
+
+41
+
+✓ Correct
+Feedback:
+Here you need to take a union of all the three sets C, F, and H. Now, since you know there are 100 students numbered 1 to 100, you can create a set containing numbers from 1 to 100. Finally, you subtract the union of C, F, and H from this set and get the required list of people who do not play any of the sports.
+
+
+63
+
+✓ Correct
+Feedback:
+Here you need to take a union of all the three sets C, F, and H. Now, since you know there are 100 students numbered 1 to 100, you can create a set containing numbers from 1 to 100. Finally, you subtract the union of C, F, and H from this set and get the required list of people who do not play any of the sports.
+
+
+85
+
+✓ Correct
+Feedback:
+Here you need to take a union of all the three sets C, F, and H. Now, since you know there are 100 students numbered 1 to 100, you can create a set containing numbers from 1 to 100. Finally, you subtract the union of C, F, and H from this set and get the required list of people who do not play any of the sports.
+
+
+                NETFLIX
+                
+Movie Views
+There's an Indian movie in the dictionary named 'Do Paise Ki Dhoop Chaar Aane Ki Baarish'. What is the number of views for this movie?
+
+2,770,879
+
+✓ Correct
+Feedback:
+Correct! When you check the number of views by using key, i.e., the title as the index, you get the value 2770879.
+
+
+Most and Least Popular
+Which of the shows is the most and least popular in terms of number of views?
+
+✓ Correct
+Gaga: Five Foot Two, Hilda
+
+
+Last Week Views
+Netflix has just recieved the number of views for the last week as well. Add these views to the total views and find the most popular title in terms of views. Also find out how many views this title has? 
+
+✓ Correct
+Title: Deliha 2, 
+
+Views: 3943452
+
+
+
+                        NUMPY GRADED QUESTION
+
+Index of 50th element
+Consider an (8, 8) shape NumPy array. What is the index (x,y) of the 50th element?
+
+Note: For counting the elements go row-wise. For example, in the array,
+
+[[1, 5, 9],
+
+ [3, 0, 2]]
+
+the 5th element would be '0'.
+
+
+(6, 1)
+
+✓ Correct
+Feedback:
+You can create an 8 x 8 array using np.array(range(1, 8*8+1)),reshape it to an (8 x 8) array and then, check the position of 50. Be clear that the indexing starts from 0; hence, the 7th row will have the index 6.
+
+Alternatively, you can also use np.unravel_index(49, (8,8)) on the created array.
+
+
+Slicing Arrays
+Which of the following would extract all the first 3 rows of the last 5 columns in a given numpy 2D array ‘a’?
+
+a[ :3 , -5: ]
+
+✓ Correct
+Feedback:
+Correct! This would extract the first 3 rows and the last five columns. The index after the comma, i.e., the index representing the columns specifies "-5:". This will extract all the columns starting from the 5th last column. 
+
+
+So Many Functions
+What will the output of np.arange(1,16,2).reshape(4, 2) be?
+
+
+[[ 1,  3],
+  [ 5,  7],
+  [ 9, 11],
+  [13, 15]]
+
+✓ Correct
+Feedback:
+np.arange(1,16,2) returns the following array:
+
+[ 1,  3,  5,  7,  9, 11, 13, 15]
+
+ 
+
+The reshape(4, 2) function then reshapes it into a (4 x 2) matrix. Hence, the matrix now becomes -
+
+[[ 1,  3],
+  [ 5,  7],
+  [ 9, 11],
+  [13, 15]]
+  
+  
+  
+  
+  
+  Print "+"
+Description
+Given a single positive odd integer 'n' greater than 2, create a NumPy array of size (n x n) with all zeros and ones such that the ones make a shape like '+'. The lines of the plus must be present at the middle row and column.
+
+
+
+Hint: Start by creating a (n x n) array with all zeroes using the np.zeros() function and then fill in the ones at the appropriate indices. Use integer division (//) to access the middle rows and columns
+
+
+
+Examples:
+
+Input 1:
+
+3
+
+Output 1:
+
+[[0 1 0]
+
+ [1 1 1]
+
+ [0 1 0]]
+
+Input 2:
+
+5
+
+Output 1:
+
+[[0 0 1 0 0]
+
+ [0 0 1 0 0]
+
+ [1 1 1 1 1]
+
+ [0 0 1 0 0]
+
+ [0 0 1 0 0]]
+
+
+
+Explanation: Notice that the 1s in the arrays make a shape like '+'.
+
+Execution Time Limit
+15 seconds
+
+
+# Read the input
+n = int(input())
+
+# Import the NumPy package
+import numpy as np 
+
+# Create an (n x n) array with all zeros
+z = np.zeros((n, n), dtype = int)
+
+# Make the middle row and middle column all 1s
+z[n//2, :] = 1
+z[: , n//2] = 1
+    
+# Print the final value of z    
+print(z)
+
+
+
+                          Pandas Graded Questions
+        
+                      MEGA MART SALES
+          
+Combining data frames
+Read the .csv files MegaMart_sales and MegaMart_new sales into two separate dataframes, combine them and store it into a new dataframe. Find the total sales value of the category 'Office Supplies'  after combining the dataframes.
+ 
+
+
+7970
+
+✓ Correct
+Feedback:
+Read the csv files into the dataframes  df and df_new and use the following code:
+
+df=pd.concat([df,df_new],axis=0,ignore_index=True) 
+
+df.groupby(by='Category').Sales.sum()
+
+
+
+
+Dropping duplicates
+There are some duplicate rows in the combined data frame. Drop these rows and calculate the total sales value of the category Office Supplies.
+
+Hint: Use the drop_duplicates() function in Pandas.
+
+6964
+
+✓ Correct
+Feedback:
+This is the right answer. Use the following code: 
+
+df.drop_duplicates(subset=None,keep='first',inplace = True)
+df.groupby(by='Category').Sales.sum()
+
+
+Best Category-Sub category
+ Find the most profitable category and subcategory combination based on the net profit.
+
+Note: Use duplicates dropped data frame
+
+Technology-Phones
+
+✓ Correct
+Feedback:
+This is the right answer. Use the following code:
+
+df.groupby(by=['Category','Sub-Category']).Profit.sum()
+
+
+
+Invalid order IDs
+How many invalid Order IDs are there in the data frame. Order ID is of the form AZ-2011-Y where Y represents a whole number. An Order ID is said to be valid only if Y consists of 7 digits. Find the number of invalid order IDs in the data frame.
+
+Note: Use duplicates dropped data frame
+
+7
+
+✓ Correct
+Feedback:
+This is the right answer. Use the following code:
+
+df['Order no']=df['Order ID'].str.split('-')
+
+df['Order no']=df['Order no'].apply(lambda x: x[2])
+
+df['no_of_digits']=df['Order no'].apply(lambda x: len(x))
+
+df['no_of_digits'].value_counts()
+ 
+
+Here, Order no represents 'Y' we are trying to check for validity. 
+
+
+
+
+
+
+Occurence of furniture in top 25 sales
+Find the top 25 orders based on sales value and find the number of orders which belong to furniture category.
+
+Note: Use duplicates dropped data frame
+
+
+5
+
+✓ Correct
+Feedback:
+This is the right answer. Use the following code:
+
+df2=df.sort_values(by='Sales', ascending=False)
+df2=df2.iloc[:25,]
+
+df2['Category'].value_counts()
+
+
+
+
+
+Multiple conditions
+Among the orders with sales>250 and profit>50, find the product name of the fourth highest order based on sales value.
+
+Note: Use duplicates dropped data frame
+
+
+Motorola Headset, with Caller ID
+
+✓ Correct
+Feedback:
+This is the right answer. Use the following code:
+
+df3=df.loc[(df['Sales']>250) & (df['Profit']>50)]
+df3=df3.sort_values(by='Sales',ascending=False) 
+
+
+
+
+
+Column manipulation
+Remove the orders with negative profit by dropping the corresponding rows with negative Profit or no Profit. Now, among the entries with non-negative profit, find the product that makes the lowest profit per Quantity in the Technology category.
+
+Note: Use duplicates dropped data frame
+
+
+Logitech Keyboard, Programmable
+
+✓ Correct
+Feedback:
+This is the right answer. Use the following code:
+
+df4=df[df.Profit>0]
+df4=df4.loc[df4.Category=='Technology']
+
+df4['Profit_per_qty']=df4['Profit']/df4['Quantity']
+
+df4.sort_values(by='Profit_per_qty',ascending=True)
