@@ -1,0 +1,94 @@
+Predict Output
+p = 4**3
+print(p)
+What will be the output of the above code snippet?
+
+64
+✓ Correct
+Feedback:
+p=4**3
+is same as saying 
+p=4^3=64
+
+
+Predict Output
+Can you predict what will be the value of 'a' after executing the following code?
+
+a = 21 % 4
+ 
+
+
+1
+
+✓ Correct
+Feedback:
+The '%' operator gives the remainder.
+
+Division
+Predict the output of the following code.
+
+d = 23//5
+print(d)
+ 
+
+
+4
+
+✓ Correct
+Feedback:
+// operator returns quotient after division. Think of this as integer division, where the float part of the division is neglected.
+
+
+
+Syntax Error
+Which of the following will give a syntax error?
+
+
+if (1):
+
+print (True)
+Feedback:
+Indentation is missing.
+
+
+if (1) print(True)
+Feedback:
+This will give a syntax error, this is a wrong way of writing an if statement
+
+
+What will be the output of the following code?
+
+for i in range(3):
+    print(i)
+
+
+0
+
+1
+
+2
+
+✓ Correct
+Feedback:
+print() goes to a new line after printing by default.
+
+range(3) will make i go over 0 1 2
+
+Hence the output.
+
+
+
+
+Print
+Which of the following will give output as:
+
+11 12 13
+
+14
+ 
+
+
+print('11 12 13 \n14')
+
+Feedback:
+\n acts as a new line character.
