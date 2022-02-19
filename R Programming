@@ -1,0 +1,304 @@
+# R-Programming-Solutions
+                    Basic Operations in R
+ 
+
+                        Variables
+Q.What would be the output displayed if you type "Fe" == "fe" in the R console? 
+
+FALSE
+
+Feedback:
+R is a case-sensitive language.
+
+                              Data Types
+Q-Let’s say you type x = 2; y = T; z = "apple" and then write three commands typeof(x); typeof(y); typeof(z). typeof() is an built-in function in R.
+
+Note the use of semicolons to write multiple commands in one line. What is the output?
+
+
+"double" "logical" "character"
+Feedback:
+Type ?typeof to search for typeof() function. R stores 2 as a double by default, not an integer! It can store it as an integer, but it doesn’t. In the background, 2.00 is how R stores a 2. Unless of course, you convert it to an integer forcefully. T refers to TRUE which is stored as Boolean in R.Vectors
+
+                                    Vectors
+
+Q. Stripping in Vectors
+vect <- c(1, 3, 5, 6)
+vect2 <- vect[-3]
+vect2
+What will be the output of the third line (vect2) in the above script?
+
+
+1, 3, 6
+
+Feedback:
+You are assigning c(1,3,6) to vect2 as vect[-3] will not contain third element of vect.
+
+                            Operations in vectors
+Q. Create vectors a = c(2 ,6, 3) and b = c(4, 3, 5, 7) on R console.
+
+What is the result of multiplication of a and b?
+
+
+8 18 15 14
+
+Feedback:
+You can note that vector multiplication also occurs element-by-element like vector addition. R expects you to operate in vectors of similar lengths, but if you don’t, it uses the first element of vector a and multiplies it with the last remaining element (7 of vector b here). But as this is not proper recycling, R also issues a warning for this and not an error, so you may choose to ignore the warning and look at the output.
+
+
+                                Data Frames
+
+                              Accessing rows & columns
+Q. Which command will print the last row of Complete_team data frame inside the list?
+
+Complete_team[6, ]
+
+Feedback:
+This is the only notation to access any row of a data frame.
+
+                  Accessing rows & columns
+Q. Which of the following commands will print the Vector “Strike_Rate” from the Complete_team data frame?
+
+Mark all the applicable options.
+
+
+Complete_team$Strike_rate
+
+Feedback:
+This is $ (dollar) notation of accessing a column
+
+
+
+Complete_team[ ,"Strike_rate"]
+
+Feedback:
+This is matrix naming notation of accessing this column.
+
+                                    Functions on Data Frames
+
+Q.How can you calculate the sum of runs scored by all players in the Complete_team?
+
+sum(Complete_team$Total_runs)
+
+Feedback:
+You have to apply sum( ) function over the Complete_team$Total_runs column, which is equivalent to applying the sum( ) function on a vector.
+
+
+                          LISTS
+                         
+                        Accessing elements in a list
+Q.
+mylist[[2]] is the command used to access the named LIST mylist comprising the info of the stadiums. Which alternative commands can also be used to get the same result?
+
+Mark all the options that are correct. 
+
+mylist[["St"]]
+
+
+Feedback:
+You can access 2nd element – by putting its name inside double quotes, in case of named list. Here the name is “St”.
+
+
+mylist[2]
+
+
+Feedback:
+Single square brackets also work in accessing the complete element of a list. But they are not helpful when you have to access specific information inside that element.
+
+Q.
+Which command will return "Eden Gardens" from the list 'mylist'?
+
+mylist[[2]][2]
+
+Feedback:
+mylist [[2]] returns St vector. To access the second element of this vector, this is the correct notation to use.
+
+Q.
+Which command would help you access the second row (mentioned below) of 'team1' data frame inside the list 'mylist'?
+
+mylist[[1]][2, ]
+
+Feedback:
+mylist [[1]] returns 'team1' data frame. To access the second row of this data frame, you need to use mylist [[1]] [2, ]
+
+              Logical and Relational Operators
+              
+          Comprehension - Relational and Logical Operators
+Q.For which questions do the number of upvotes of B are greater than that of A?
+
+You have to store this result as a logical vector B_greater_A, that contains TRUE if corresponding upvotes for B is greater than A.        
+
+
+B_greater_A <- B_upvotes > A_upvotes
+
+Feedback:
+Two vectors can be compared element by element using relational operators. B_upvotes > A_upvotes would return a logical vector, having TRUE when B has greater upvotes than A, and FALSE otherwise. This logical vector is assigned to a variable B_greater_A.
+
+Q. 4 or more upvotes means that the answer is quite useful/popular, which attracts extra points.
+
+Which command would be used to find the total number of such popular answers of A in the last 6 days?
+
+sum(A_upvotes >= 4)
+
+Feedback:
+A_upvotes returns a logical vector, containing TRUE when upvotes are greater than 4. To find the number of TRUEs in that logical vector, the sum( ) function can be used as TRUE is taken as 1, and FALSE is taken as 0 while performing mathematical operators on vectors. Hence, the sum of all elements would give a total number of 1s.
+
+
+Q.Data says that an answer with greater than 3 upvotes has a good probability of being correct. So, there are more chances of getting ‘TA verified’ points as well.
+
+Which command will return a logical vector, telling us which questions have higher chances of both A’s and B’s answers marked as TA verified?
+
+(A_upvotes > 3) & (B_upvotes > 3)
+
+Feedback:
+Both their answers marked as TA verified means getting >3 upvotes. (A_upvotes > 3) & (B_upvotes > 3) would return a boolean vector, which returns TRUE when both conditions are TRUE (means both A’s AND B’s upvotes are greater than 3 for the same question).
+
+                              Loops
+    Comprehension - Conditional Statements & Loops
+        
+Q. Badges are given to participants based on the average number of upvotes their answers get.
+
+A_upvotes <- c(7, 3, 2, 8, 0, 4)
+if(mean(A_upvotes) >= 4)
+{
+  print("Congratulations, you won the Popular Badge")
+} 
+else if(mean(A_upvotes) >= 3)
+{
+  print("You are quite close to winning a Badge. Keep working hard.")
+}
+ 
+
+Running the above set of commands in R gives an error. Which action can remove that error?
+
+
+Moving “else if’ command to the upper line, where ‘if’ block gets over
+
+Feedback:
+Syntax error. else if ( ) should always be mentioned in the same line, where if( ) block gets over, after the closing curly bracket.
+
+Q. Badges are given to participants based on the average number of upvotes they have got on their answers.
+
+A_upvotes <- c(7, 3, 2, 8, 0, 4)
+if(mean(A_upvotes) >= 8)
+{
+  print("Congratulations, you won the Superstar Badge")
+} else if(mean(A_upvotes) >= 4)
+{
+  print("Congratulations, you won the Popular Badge")
+} else 
+{
+  print("You are quite close to winning a Badge. Keep working hard.")
+}
+What will be the output of the above commands in R?
+
+
+Congratulations, you won the Popular Badge
+
+Feedback:
+Mean of A_upvotes comes out to 4. So condition inside if( ) statement is not TRUE and if( ) block doesn’t get executed. Now, condition inside else if( ) statement is TRUE and this block gets executed.
+
+                                  FUNCTIONS
+                                  Comprehension - Built-in Functions
+                                  
+Q.4 or more upvotes means that the answer is quite useful/popular, which attracts extra points.
+
+ 
+
+A_upvotes >= 4 will return a logical vector, telling you for which questions A’s answer had gone viral. Which command will find you the sequence order of those popular questions?
+
+which(A_upvotes >= 4)
+
+Feedback:
+which( ) function always returns the index of elements for which the condition inside the function is TRUE. This means which(A_upvotes >=4) condition returns the index of all TRUE’s in the A_upvotes >=4 logical vector.
+
+Q. 4 or more upvotes means that the answer is quite useful/popular, which attracts extra points.
+
+sum(A_upvotes >= 4) returns the number of popular answers of A. Which of these commands can also serve the same purpose?
+
+length(which(A_upvotes >= 4))
+
+Feedback:
+sum( ) function can be used to calculate the number of TRUEs in (A_upvotes >= 4) logical vector. which(A_upvotes >= 4) returns the sequence index of questions having greater than 4 upvotes. So applying the length( ) function on that will give you the length of that sequence, which is the total number of such indices which correspond to greater than 4 upvotes.
+
+                            Creating your own function
+                            
+ Q. Predict the output of the following commands.
+
+function_math <- function(x, y){
+  z <- x + y
+  p <- x * y
+  q <- z / p
+  return(c(z, p, q))
+}
+function_math(2, 3)
+ 
+A vector: 5.000 6.000 0.833
+
+Feedback:
+function_math is taking 2, 3 as its arguments. Substituting x = 2 and y = 3 gives z = 5, p = 6 and q = 5/6 = 0.833 So function_math will return c(z, p, q), hence a vector.    
+
+                             Arguments of a functions
+ 
+Q.What type of arguments can a function take? Choose all the options that are correct.
+
+
+Vectors
+✓ Correct
+Feedback:
+Functions can take vectors as arguments. Example: length( )
+
+Data frames
+✓ Correct
+Feedback:
+Functions can take data frames as arguments. Example: nrow( )
+
+Integers
+✓ Correct
+Feedback:
+Functions can take integers as arguments. Example: sqrt( )
+
+Character & Logical strings
+✓ Correct
+Feedback:
+Functions can take character and logical strings as arguments. Example: paste( )
+
+Q. Calling a function
+I wrote a function (named fun_square) which returns a vector (x^2, y^2, z^2 ) and takes (x, y, z) as the argument.
+
+fun_square<- function(vector_in){
+  vector_out <- vector_in^2
+  return(vector_out)
+}
+ 
+Which of the following is the right command to call this function?
+
+
+fun_square(c(2, 3, 4))
+
+Feedback:
+fun_square is a function, which takes a vector (‘vector_in’) as its argument. So the argument should not be just 3 numeric integers, you need to combine them to form a vector.
+
+                                                Apply Family
+                                              
+Comprehension - SAPPLY Family
+Badges are given to participants based on the average number of upvotes they have got their answers.
+
+You want to use sapply( ) to find the mean of upvotes of all the four students. Which of the following commands will perform your task in a single line?
+
+
+sapply(combined_df, mean)
+
+Feedback:
+You want to apply mean( ) function on all the four individual vectors. So a data frame should go as an argument to the sapply( ) function. Vectors go as an argument to the sapply( ) when a function has to be applied to its individual elements. The correct syntax of using sapply( ) is sapply(data_structure, function_name).
+
+v <- sapply(combined_df, max)
+ v[3]
+ 
+Q. What will be the output of the above lines of code?
+
+6
+
+Feedback:
+combined_df is a data frame, so max( ) function would have been applied on each column. Therefore, this command sapply(combined_df, max) would apply max( ) function on all four columns of combined_df. As the result is assigned to v, v would be vector of length 4. v[3] would return max(data_frame[ ,3]) or max(C_upvotes).
+
