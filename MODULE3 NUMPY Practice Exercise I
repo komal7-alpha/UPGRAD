@@ -28,3 +28,51 @@ What is the average price of the products sold by the e-commerce company?
 Feedback:
 The average price of products will be the mean of the elements in the list ‘price’.
 Syntax: price.mean() [For this command, the list has to be converted to array first]
+
+                                                Array Operations
+What is the price of the costliest item sold?
+
+285
+
+✓ Correct
+Feedback:
+The maximum value in the list ‘price’ will give you the price of the costliest product. 
+Syntax: max(price) [You can use the command over a list or an array directly.]
+
+                Array Operations
+What is the total revenue of the company? [Revenue = Price*Quantity]
+
+
+67,100
+
+✓ Correct
+Feedback:
+The revenue of the company will be the sum of (price * quantity) for each product sold.
+Syntax: np.sum(price*number) [For this command, the lists have to be converted to array first.]
+
+
+
+                                        Array Operations
+Demand for the 20th product on the list is higher than that for the 50th product. [True/False]
+
+
+True
+
+✓ Correct
+Feedback:
+This can be checked through the conditional operator.
+Syntax: number[19]>number[49] 
+
+
+Array Operations
+How many products fall under the category of expensive goods?
+An expensive good is one whose price is higher than the average price of the products sold by the company.
+
+
+52
+
+✓ Correct
+Feedback:
+You can subset the required entries and then take a count of them.
+Syntax: price[price > price.mean()].size 
+[For this command, the list has to be converted to an array first]
