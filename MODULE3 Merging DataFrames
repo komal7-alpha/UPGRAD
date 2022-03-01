@@ -1,0 +1,96 @@
+Merging Dataframes
+Suppose you are provided with two dataframes:
+From the two dataframes above, how will you generate the following dataframe?
+
+df_1.merge(df_2, how = 'inner')
+✓ Correct
+Feedback:
+This is the correct answer. The ‘inner’ option is useful when you want those elements that are common in both the dataframes.
+
+                                  Dataframes Merge
+Description
+Perform an inner merge on two data frames df_1 and df_2 on  'unique_id' and print the combined dataframe.
+Execution Time Limit
+20 seconds
+
+import ssl
+ssl._create_default_https_context = ssl._create_
+import pandas as pd
+df_1 = pd.read_csv('https://cdn.upgrad.com/uploads/production/1ed2840b-f083-44fe-9eb4-acda009ac620/restaurant-1.csv')
+df_2 = pd.read_csv('https://cdn.upgrad.com/uploads/production/c87b99b4-467c-4128-8729-85bff0b0acbe/restaurant-2.csv')
+df_3 = pd.merge(df_1,df_2,how='inner', on='unique_id')
+print(df_3.head(20))
+
+                                Dataframe Append
+Description
+Append two datasets df_1 and df_2, and print the combined dataframe.
+
+Execution Time Limit
+20 seconds
+
+
+# Suppressing warnings
+import warnings
+warnings.simplefilter("ignore")
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+import pandas as pd
+df_1 = pd.read_csv('https://cdn.upgrad.com/uploads/production/1ed2840b-f083-44fe-9eb4-acda009ac620/restaurant-1.csv')
+df_2 = pd.read_csv('https://cdn.upgrad.com/uploads/production/c87b99b4-467c-4128-8729-85bff0b0acbe/restaurant-2.csv')
+
+df_3 = pd.concat([df_1, df_2])
+
+print(df_3.head())
+
+                                    Operations on multiple dataframes
+Description
+Given three data frames containing the number of gold, silver, and bronze Olympic medals won by some countries, determine the total number of medals won by each country. 
+
+Note: All three data frames don’t have all the same countries. So, ensure you use the ‘fill_value’ argument (set it to zero), to avoid getting NaN values. Also, ensure you sort the final data frame, according to the total medal count in descending order. Make sure that the results are in integers.
+
+
+
+Execution Time Limit
+15 seconds
+
+
+
+
+# For a video solution of the code, copy-paste the following link on your browser:
+# https://youtu.be/p0cnApQDotA
+
+import numpy as np 
+import pandas as pd
+
+# Defining the three dataframes indicating the gold, silver, and bronze medal counts
+# of different countries
+gold = pd.DataFrame({'Country': ['USA', 'France', 'Russia'],
+                         'Medals': [15, 13, 9]}
+                    )
+silver = pd.DataFrame({'Country': ['USA', 'Germany', 'Russia'],
+                        'Medals': [29, 20, 16]}
+                    )
+bronze = pd.DataFrame({'Country': ['France', 'USA', 'UK'],
+                        'Medals': [40, 28, 27]}
+                    )
+
+# Set the index of the dataframes to 'Country' so that you can get the countrywise
+# medal count
+gold.set_index('Country', inplace = True)
+silver.set_index('Country', inplace = True) 
+bronze.set_index('Country', inplace = True) 
+
+# Add the three dataframes and set the fill_value argument to zero to avoid getting
+# NaN values
+total = gold.add(silver, fill_value = 0).add(bronze, fill_value = 0)
+
+# Sort the resultant dataframe in a descending order
+total = total.sort_values(by = 'Medals', ascending = False).astype("int64")
+
+# Print the sorted dataframe
+print(total)
+
+
+
+
+
