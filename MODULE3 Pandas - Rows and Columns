@@ -1,0 +1,32 @@
+Setting the Index
+Which of the following functions is used to change the name of an existing index in a dataframe?
+
+
+df.index.name
+✓ Correct
+Feedback:
+This function is used to change the name of the index. You can simply provide a new name as follows: df.index.name = 'new_name'.
+
+
+
+                                              Loading a csv with index
+Description
+Using the file ‘marks.csv’, create a dataframe as shown below.
+
+You must be able make the first column of the file as the index and name it 'S.No.'. Also, the columns must be renamed as shown in the image.
+
+Execution Time Limit
+15 seconds
+
+
+
+import numpy as np
+import pandas as pd
+
+# The file is stored at: 'https://media-doselect.s3.amazonaws.com/generic/A08MajL8qN4rq72EpVJbAP1Rw/marks_1.csv'
+# Provide your answer below
+df = pd.read_csv('https://media-doselect.s3.amazonaws.com/generic/A08MajL8qN4rq72EpVJbAP1Rw/marks_1.csv', header = None, sep = '|', index_col = 0)
+df.columns = ['Name', 'Subject', 'Maximum Marks', 'Marks Obtained', 'Percentage']
+df.index.name = 'S.No.'
+
+print(df)
