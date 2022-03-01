@@ -1,0 +1,136 @@
+Indexing Array
+Given an array:
+
+array_1 = [1,2,3,5,4,6,7,8,5,3,2]
+What will be the output of the code provided below?
+
+print(array_1[:3])
+
+[1, 2, 3]
+
+✓ Correct
+Feedback:
+The function only gives the first three entries, and this answer follows that.
+
+                        Indexing Array
+Given an array:
+
+array_1 = [1,2,3,5,4,6,7,8,5,3,2]
+What will be the output of the code provided below?
+
+print(array_1[2:-3])
+ 
+
+
+[3 5 4 6 7 8]
+ 
+
+✓ Correct
+Feedback:
+The desired values start from the third entry (included) in the array until the third last entry (excluded).
+
+                            Indexing Array
+Given an array:
+
+array_1 = [1,2,3,5,4,6,7,8,5,3,2]
+What will be the output of the code provided below?
+(Hint: The syntax is [starting value : end value : step value])
+
+print(array_1[ : : -2])
+
+
+[2, 5, 7, 4, 3, 1]
+ 
+
+✓ Correct
+Feedback:
+Correct Answer! The syntax is [starting value : end value : skip value]. Here, since the skip value is negative, it means that we will start from the opposite direction take every second value in the array
+  
+                                Indexing Array
+How would you extract all the elements with an odd index in a given array?
+(Hint: Odd index refers to the position of the element, not the actual value)
+
+array[1: : 2]
+✓ Correct
+Feedback:
+The syntax here will give all the elements at odd indices.
+
+                               
+                               
+                               
+                               
+                               
+                               
+                               Extracting Elements from Array
+Description
+From a given array, extract all the elements which are greater than 'm' and less than 'n'. Note: 'm' and 'n' are integer values provided as input.
+
+
+
+Input format:
+
+A list of integers on line one
+
+Integer 'm' on line two
+
+Integer 'n' on line three
+
+
+
+Output format:
+
+1-D array containing integers greater than 'm' and smaller than 'n'.
+
+
+
+
+
+Sample input:
+
+[ 1, 5, 9, 12, 15, 7, 12, 9 ] (array)
+
+6 (m)
+
+12 (n)
+
+
+
+Sample output:
+
+[ 9 7 9 ]
+
+
+
+
+
+Sample input:
+
+[ 1, 5, 9, 12, 15, 7, 12, 9 ]
+
+12
+
+6
+
+
+
+Sample output:
+
+[ ]
+
+Execution Time Limit
+15 seconds
+
+
+
+#take input here
+import ast
+input_list=ast.literal_eval(input())
+m=int(input())
+n=int(input())
+
+#start writing your code from here
+import numpy as np 
+array_1 = np.array(input_list)
+final_array = array_1[(array_1<n) & (array_1>m)]
+
+print(final_array)
