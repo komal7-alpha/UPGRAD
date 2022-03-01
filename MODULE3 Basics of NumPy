@@ -1,0 +1,28 @@
+              Creating an Array
+Select the correct option to create a 1-d array using the following elements (1.0, 2, 3.5, 0.2, True). 
+(Note that ‘True’ must be provided as a Boolean value, not as a string.)
+
+np.array( [1.0, 2, 3.5, 0.2, True] )
+✓ Correct
+Feedback:
+This is the correct answer. You have to provide the elements in the form of a list or a tuple to form an array. Also, a Boolean value is defined without the apostrophes.
+
+          NumPy Array
+What is the default data type of each element in the array created in the previous question?
+
+Float
+
+✓ Correct
+Feedback:
+Float can accommodate the integer values; hence, all the values are converted to float. Check the output in Jupyter notebook to confirm.
+
+                                Creating an array
+Is it possible to create an array from a tuple?
+
+
+Yes
+
+✓ Correct
+Feedback:
+Yes, NumPy arrays can be created using a tuple. Any sequence that has an array-like structure can be passed to the np.array function.
+
