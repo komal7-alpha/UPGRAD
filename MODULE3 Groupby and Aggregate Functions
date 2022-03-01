@@ -1,0 +1,27 @@
+Groupby function
+What does the function: dataframe.groupby() return without any aggregate function?
+
+A Pandas object is created
+
+✓ Correct
+Feedback:
+Correct Answer! It returns a Pandas object, which can be used to perform further desired aggregation function. Check the output using the type function.
+
+                                            
+                                            Dataframe grouping
+Description
+Group the dataframe 'df' by 'month' and 'day' and find the mean value for column 'rain' and 'wind'.
+
+Execution Time Limit
+15 seconds
+
+
+import ssl
+ssl._create_default_https_context = ssl._create_unverifie
+import pandas as pd
+df = pd.read_csv('https://cdn.upgrad.com/uploads/production/b3467ba4-4e13-44e9-8087-4d7e94cc7586/forestfires.csv')
+by = df.groupby(['month', 'day'])
+df_1 = by['rain','wind'].mean()
+print(df_1.head(20))
+
+                                        
