@@ -1,0 +1,53 @@
+Array 'arange' Function
+Description
+Create an array of first 10 multiples of 5 using the 'arange' function.
+Execution Time Limit
+15 seconds
+
+
+  import numpy as np
+array_multipleof5 = np.arange(5,51,5)
+
+print(array_multipleof5)
+
+          
+              Create border array
+Description
+Given a single integer n, create an (n x n) 2D array with 1 on the border and 0 on the inside.
+
+Note: Make sure the array is of type int.
+
+Example:
+Input 1:
+4
+Output 1:
+[[1 1 1 1]
+[1 0 0 1]
+[1 0 0 1]
+[1 1 1 1]]
+Input 2:
+2
+Output 2:
+[[1 1] 
+ [1 1]] 
+
+Execution Time Limit
+15 seconds
+
+
+# Read the variable from STDIN
+n = int(input())
+
+import numpy as np
+
+# Create an 'n*n' array of all ones
+border_array = np.ones((n, n), dtype = int)
+
+# Fill the array with zeroes from second index (i.e. index 1) to second last index.
+# Do this for both row indices and column indices
+border_array[1:-1, 1:-1] = 0
+
+# Print the array created
+print(border_array)
+
+
