@@ -1,0 +1,78 @@
+Hierarchical Indexing
+Description
+You are provided with the dataset of a company which has offices across three cities - Mumbai, Bangalore and New Delhi. The dataset contains the rating (out of 5) of all the employees from different departments (Finance, HR, Marketing and Sales). 
+
+
+
+Create a hierarchical index based on two columns: Office and Department
+
+
+
+Print the first 5 rows as the output. Refer to the image below for your reference.
+
+
+
+
+
+
+
+Note: You should not sort or modify values in other columns of the dataframe. Use sort_index(inplace=True) to club the same locations together.
+
+Execution Time Limit
+15 seconds
+
+
+import numpy as np
+import pandas as pd
+
+# The file is stored at the following path:
+# 'https://media-doselect.s3.amazonaws.com/generic/NMgEjwkAEGGQZBoNYGr9Ld7w0/rating.csv'
+df = pd.read_csv('https://media-doselect.s3.amazonaws.com/generic/NMgEjwkAEGGQZBoNYGr9Ld7w0/rating.csv')
+
+# Provide your answer below
+df.set_index(['Office', 'Department'], inplace = True)
+df.sort_index(inplace=True)
+
+print(df.head(5))
+
+
+                                          Describing Data
+Which of the following commands would you use to check the count of all the entries in each column in the dataframe as well as the count of the non-null entries in each column in the dataframe at the same time?
+
+
+info()
+
+✓ Correct
+Feedback:
+This is the correct answer. This function shows the range of indices for the count of all the entries in the column and maintains a count of non-null values for each column individually
+
+
+
+
+
+                                                      DataFrames
+Description
+Given a dataframe 'df' use the following commands and analyse the result.
+describe() 
+columns
+shape
+Execution Time Limit
+20 seconds
+
+
+                            KINDLY REFRESH YOUR LEARN PLATFORM
+
+import os, ssl
+if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
+    getattr(ssl, '_create_unverified_context', None)):
+    ssl._create_default_https_context = ssl._create_unverified_context
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+import numpy as np
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/vBDCsoHCytUSLKkLvq851k2b8JOCkF')
+print(df.describe())
+print(df.columns)
+print(df.shape)
+
+                    
