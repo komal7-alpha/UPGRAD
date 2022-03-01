@@ -1,0 +1,49 @@
+Reverse The Digits
+Description
+You will be given a number. You have to reverse the digits of the number and print it.
+
+----------------------------------------------------------------------
+Input:
+A positive integer greater than zero
+
+Output:
+The number in reverse order. Check sample outputs for more details.
+
+----------------------------------------------------------------------
+Sample input:
+345200
+
+Sample output:
+2543
+
+----------------------------------------------------------------------
+Sample input:
+6752343
+
+Sample output:
+3432576
+Execution Time Limit
+20 seconds
+
+SOLUTION--
+                  #MY CODE--
+#take input of the number here
+num = input()
+
+#write code to reverse the number here
+reverse_num = int(num[::-1])
+print(reverse_num)
+
+                  #UPGRAD CODE--
+#take input of the number here
+n = int(input())
+
+#write code to reverse the number here
+r=0
+
+while(n>0):
+    r = r*10 + n%10
+    n = n//10
+
+print(r)
+
