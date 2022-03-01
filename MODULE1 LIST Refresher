@@ -1,0 +1,50 @@
+List
+Which of the following will make a list?
+
+
+L = [1, 2, 3, 4]
+
+L = [i for i in range(1, 5)]
+
+      Output
+What will be the output of the following code
+
+L=[2, 3, 4, 2, 1, 2, 3]
+print(L.index(2))
+
+0
+Feedback:
+L.index(k) will return the index of the first occurrence of the element k in L
+
+                What is K
+What is K in the following code?
+
+L = [2, 1, 2, 4, 5, 3, 6]
+K = 4 in L
+ 
+
+Boolean saying if 4 is in List or not
+
+Feedback:
+in functionality checks if the element is in the list or no. 
+
+                    Many Ways
+Given L=[10,20,30,40,50,60,70,80,90,100], how will you get a list [20, 40, 60, 80]
+
+L[1:-1:2]
+Feedback:
+This will give the required list [20, 40, 60, 80]
+
+
+[L[i] for i in range(1,9,2)]
+Feedback:
+This will give the required list [20, 40, 60, 80]
+
+
+                          How to Append
+How will you add the list A = [10, 20, 30] at the end of list B = [45, 35, 25], making the final list as [45, 35, 25, 10, 20, 30].
+
+B.extend(A)
+Feedback:
+This will make B=[45, 35, 25, 10, 20, 30]
+
