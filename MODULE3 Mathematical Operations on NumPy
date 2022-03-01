@@ -1,0 +1,146 @@
+Index of the 100th Element
+Consider an (11,12) shape array. What is the index (x,y) of the 100th element? Note: For counting the elements, go row-wise. For example, in the array:
+
+[[1, 5, 9],
+ [3, 0, 2]]
+the 5th element would be '0'.
+
+
+(8, 3)
+
+✓ Correct
+Feedback:
+You can create an 11 x 12 array using np.array(range(1, 11*12+1)). You can reshape it to an (11 x 12) array and then check the position of 100. Be clear that the indexing starts from 0; hence, the 9th row will have the index 8.
+Alternatively, you can also use np.unravel_index(99, (11,12)) on the created array.
+
+                                Reshaping an Array
+Suppose you have an array 'p':
+
+[[1, 5],
+ [3, 7],
+ [4, 9]]
+What will be the output of the following code?
+
+np.reshape(p, -1)
+ 
+
+
+1-d array
+
+✓ Correct
+Feedback:
+reshape() function returns a 1-D array when you specify the shape as -1.
+
+                                Reshaping an Array
+Consider the array provided below: 
+
+[[1, 2, 3, 4, 5]
+ [6, 7, 8, 9, 10]
+ [11, 12, 13, 14, 15]
+ [16, 17, 18, 19, 20]]
+Now, you are expected to generate the following array out of it:
+
+[[1, 3]
+ [5, 7]
+ [9, 11]
+ [13, 15]
+ [17, 19]]
+Which code will give you the correct output?
+(Hint: Also check if one or more options are correct.)
+
+
+
+print(array_1[array_1%2 != 0].reshape(5, 2))
+✓ Correct
+Feedback:
+print(array_1[array_1%2 != 0].reshape(5, 2))
+This is the correct way to slice odd entries and arrange them in the given order.
+
+
+
+                          Reshaping an array
+Suppose you have an array 'p'
+
+[[1, 5],
+ [3, 7],
+ [4, 9]]
+What will be the output of the following code?
+
+np.reshape(p, (1, -1))
+
+
+2-D Array
+
+✓ Correct
+Feedback:
+The dimension of the array is specified by the number of elements you specify in the tuple. Here, the answer is 2-D array.
+
+
+
+                                          Stacking arrays
+Description
+Merge the three arrays provided to you to form a one 4x4 array.
+
+[Hint: Check the function np.transpose() in the 'Manipulating Arrays' notebook provided.]
+
+
+
+Input:
+
+Array 1: 3*3
+
+[[7, 13, 14]
+
+[18, 10, 17]
+
+[11, 12, 19]]
+
+
+
+Array 2: 1-D array
+
+[16, 6, 1]
+
+
+
+Array 3: 1*4 array
+
+[[5, 8, 4, 3]]
+
+
+
+Output:
+
+[[7 13 14 5]
+
+[18 10 17 8]
+
+[11 12 19 4]
+
+[16 6 1 3]]
+
+Execution Time Limit
+15 seconds
+
+
+
+
+
+
+# Read the input
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+list_1 = input_list[0]
+list_2 = input_list[1]
+list_3 = input_list[2]
+
+# Import NumPy
+import numpy as np
+
+# Write your code here
+final_array = np.hstack([np.vstack([np.array(list_1),np.array(list_2)]), np.transpose(np.array(list_3))])
+print(final_array)
+
+
+
