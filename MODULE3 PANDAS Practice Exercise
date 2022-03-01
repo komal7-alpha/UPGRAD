@@ -1,0 +1,142 @@
+Structure of a Dataframe
+How many rows and columns are present in the dataframe? 
+
+(3853, 28)
+
+✓ Correct
+Feedback:
+You can use the shape command to check the number of rows and columns in a dataframe
+
+
+
+                      Columns with Null values
+How many columns have null values present in them? Try writing code for this instead of counting them manually.
+
+12
+
+✓ Correct
+Feedback:
+You can find the number of columns with null values using the following syntax:
+
+print((movies.isnull().sum()>0).sum())
+movies.isnull().sum() returns the sum of null values in each column. Over that, you can implement the condition as provided above.
+
+                                                Dropping Columns
+What is the count of columns in the new dataframe?
+
+13
+
+✓ Correct
+Feedback:
+You can check the number of columns using the 'shape' function again
+
+                                                            Deriving a Metric
+Which column has the highest percentage of null values?
+
+
+language
+
+✓ Correct
+Feedback:
+You can calculate the percentage of null values using the code learnt in Question 2. 
+
+Syntax: 
+
+round(100*(movies.isnull().sum()/len(movies.index)), 2)
+
+                                                Replacing Null values
+What is the count of movies made in the English language after replacing the NaN values with English?
+
+
+3674
+
+✓ Correct
+Feedback:
+To replace the values, you can equate the entries with language column as null with 'English':
+
+movies.loc[pd.isnull(movies['language']), ['language']] = 'English'
+ 
+
+Next, you can count the movies made in English:
+
+(movies.language == 'English').sum()
+
+                                        Sorting a dataframe
+Which movie is ranked 5th from the top in the list based on the net profit obtained?
+
+Note: net profit = gross - budget
+
+
+E.T. the Extra-Terrestrial
+
+✓ Correct
+Feedback:
+You can create the column 'Profit' using the following code:
+
+movies['profit'] = movies['gross'] - movies['budget']
+Once you have the column ready, you can use the sort function:
+
+top_10 = movies.sort_values(by = 'profit', ascending = False).head(10)
+
+
+                                              Analysing dataframes
+Suppose movies are divided into 5 buckets based on the IMDb ratings:
+
+[7.5, 8)
+[8, 8.5)
+[8.5, 9)
+[9, 9.5)
+[9.5, 10)
+Which bucket holds the maximum number of movies from IMDb_Top_250?
+
+
+[8, 8.5)
+
+✓ Correct
+Feedback:
+You can use the following code to solve this question:
+
+IMDb_Top_250 = movies.sort_values(by = 'imdb_score', ascending = False)
+IMDb_Top_250 = IMDb_Top_250.loc[IMDb_Top_250.num_voted_users > 25000]
+IMDb_Top_250 = IMDb_Top_250.iloc[:250, ]
+IMDb_Top_250['Rank'] = range(1,251)
+
+import matplotlib.pyplot as plt
+plt.hist(IMDb_Top_250['imdb_score'], bins = 5, range = (7.5,10), edgecolor = 'cyan')
+plt.show()
+
+
+                          Operations on Dataframe
+Which actor is highest rated among the three actors according to the user reviews?
+
+Leonardo DiCaprio
+
+✓ Correct
+Feedback:
+ 
+To solve the question, you can use the following code:
+
+Meryl_Streep = movies.loc[movies.actor_1_name == 'Meryl Streep']
+Leo_Caprio = movies.loc[movies.actor_1_name == 'Leonardo DiCaprio']
+Brad_Pitt = movies.loc[movies.actor_1_name == 'Brad Pitt']
+Combined = pd.concat([Meryl_Streep, Brad_Pitt, Leo_Caprio])
+Combined_by_segment = Combined.groupby('actor_1_name')
+
+Combined_by_segment['num_user_for_reviews'].mean()
+
+                                            Operations on Dataframe
+Which actor is highest rated among the three actors according to the critics?
+
+Leonardo DiCaprio
+
+✓ Correct
+Feedback:
+To solve the question, you can use the following code:
+
+Meryl_Streep = movies.loc[movies.actor_1_name == 'Meryl Streep']
+Leo_Caprio = movies.loc[movies.actor_1_name == 'Leonardo DiCaprio']
+Brad_Pitt = movies.loc[movies.actor_1_name == 'Brad Pitt']
+Combined = pd.concat([Meryl_Streep, Brad_Pitt, Leo_Caprio])
+Combined_by_segment = Combined.groupby('actor_1_name')
+
+Combined_by_segment['num_critic_for_reviews'].mean()
