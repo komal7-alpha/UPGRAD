@@ -1,0 +1,62 @@
+Shape of an Array
+What are the dimensions of the array created using the list 'score'?
+
+2
+
+✓ Correct
+Feedback:
+You can check the dimensions of the array using np.ndim after converting the list to an array.
+Syntax: score.ndim [For this command, the list has to be converted to an array first]
+
+                  Array Operations
+How many players scored 0 runs in their first inning?
+
+26
+
+✓ Correct
+Feedback:
+You can slice the created array over the asked condition and then count the number of entries.
+Syntax: len(score[score[:,0]==0]) [For this command, the list has to be converted to an array first.]
+
+
+                                                Array Operations
+What is the highest number of wickets taken by a player?
+
+
+4
+
+✓ Correct
+Feedback:
+The number of wickets are stored in the second element in the list score.
+Syntax: np.max(score[:, 1]) [For this command, the list has to be converted to an array first.]
+
+
+                                                Array Operations
+Find the ID of the player who scored the maximum runs in the innings
+
+
+548
+
+✓ Correct
+Feedback:
+The number of runs are stored in the first element in the list score.
+Syntax: player[score[:, 0] == np.max(score[:, 0])] [For this command, the lists have to be converted to an array first.]
+
+
+
+                                                  Array Operations
+How many all-rounders are present in the provided list?
+
+An all-rounder is someone who is good in both batting and bowling. Check if the individual has taken 2 or more wickets and scored more than 35 runs in their innings.
+ 
+
+6
+
+✓ Correct
+Feedback:
+Provide multiple conditions to fetch the desired rows.
+Syntax: len(score[(score[:, 0]>35) & (score[:, 1]>=2)]) [For this command, the lists have to be converted to an array first.]
+
+
+                                              
+                                              
