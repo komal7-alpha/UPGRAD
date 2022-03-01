@@ -1,0 +1,83 @@
+                                Selecting Columns of a Dataframe
+Description
+Print out the columns 'month', 'day', 'temp', 'area' from the dataframe 'df'.
+
+Execution Time Limit
+20 seconds
+
+
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/vBDCsoHCytUSLKkLvq851k2b8JOCkF')
+df_2 = df[['month', 'day', 'temp' , 'area']]
+print(df_2.head(20))
+
+                      Indexing Dataframes
+Description
+Print only the even numbers of rows of the dataframe 'df'.
+
+Note: Don't include the row indexed zero.
+Execution Time Limit
+20 seconds
+
+
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+import pandas as pd
+df = pd.read_csv('https://query.data.world/s/vBDCsoHCytUSLKkLvq851k2b8JOCkF')
+df_2 =  df[2: :2] #Type your code here for indexing the dataframe
+print(df_2.head(20))
+
+
+
+                                          Indexing and Slicing
+Take a look at the dataframe (‘df’) provided below.
+
+
+Which of the code(s) below will fetch the row containing the following data?
+
+[S. No.: 3, Name: Vikas, Subject: Mathematics, Percentage: 84]
+
+
+df.loc[[3], ["Name", "Subject", "Percentage"]]
+✓ Correct
+Feedback:
+The loc function takes input in the form of labels. The specified row has the row label ‘3’ and the columns specified are also correct.
+
+
+df.iloc[[2], [0, 1, 4]]
+✓ Correct
+Feedback:
+The iloc function takes input in the form of position. The specified row is at index ‘2’ (starts at 0) and the columns specified are also correct.
+
+
+
+                                          iloc vs loc
+What is the difference between the use of iloc and loc?
+
+
+Suggested Answer
+The functionalities of iloc and loc are different; iloc fetches the rows/columns at a particular position (and hence takes an integer as input), whereas loc fetches rows/columns with particular labels.
+
+
+                                          Applying Conditions on Dataframes
+Description
+Print all the columns and the rows where 'area' is greater than 0, 'wind' is greater than 1 and the 'temp' is greater than 15.
+Execution Time Limit
+15 seconds
+
+
+
+
+# For a video solution of this code, copy-paste the following link in your browser:
+# https://youtu.be/Ogl1ukLi7ms
+
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+import pandas as pd
+df = pd.read_csv('https://cdn.upgrad.com/uploads/production/b3467ba4-4e13-44e9-8087-4d7e94cc7586/forestfires.csv')
+df_2 = df.loc[(df.area>0)&(df.temp>15)&(df.wind>1),:]
+print(df_2.head(20))
+
+                                  
