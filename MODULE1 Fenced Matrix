@@ -1,0 +1,86 @@
+Fenced Matrix
+Description
+You will be given two positive integers m and n. You have to make a list of lists (which can be visualised as a matrix) of size m*n, that is m sublists (rows), with each sublists having n integers (columns). The matrix should be such that it should have 1 on the border and 0 everywhere else. See sample input and output for more clarification.
+
+
+
+----------------------------------------------------------------------
+
+Input:
+
+Two integers separated by a comma
+
+
+
+Output:
+
+A list of lists of size m*n printed like matrix as shown in the sample output.
+
+
+
+----------------------------------------------------------------------
+
+Sample input:
+
+4,5
+
+
+
+Sample output:
+
+[1, 1, 1, 1, 1]
+[1, 0, 0, 0, 1]
+[1, 0, 0, 0, 1]
+[1, 1, 1, 1, 1]
+
+
+----------------------------------------------------------------------
+
+Sample input:
+
+3,3
+
+
+
+Sample output:
+
+[1, 1, 1]
+[1, 0, 1]
+[1, 1, 1]
+
+
+----------------------------------------------------------------------
+
+Sample input:
+
+3,2
+
+
+
+Sample output:
+
+[1, 1]
+[1, 1]
+[1, 1]
+Execution Time Limit
+20 seconds
+
+
+in_str=input()
+in_str=in_str.split(',')
+m=int(in_str[0])
+n=int(in_str[1])
+
+#make a list with n zeroes
+final=[0]*n
+
+#make a matrix of m such lists
+final=[list(final) for i in range(m)]
+for i in range(m):
+    for j in range(n):
+        if i==0 or j==0 or i==m-1 or j==n-1:
+            final[i][j]=1
+            
+#print in the fashion as shown in Sample output
+for i in final:
+    print(i)
