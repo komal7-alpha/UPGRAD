@@ -1,0 +1,121 @@
+Recruit New Members
+Description
+Suppose you are a manager as a big firm and now are looking for new members for your team. You sent out an advertisement and have received a few applications. You have a habit of scoring people on a scale of 100. You have given scores to all the members of your team and the new applications. The process of selection is going to be very straightforward if the applicant improves the average of the team then you hire the applicant to join the team or else reject the application. Remember the order of processing applications is going to be important here.
+
+
+
+You may see this as an extension of the previous problem, which it is. You may use the code written in the previous question as a function to improve the code quality.
+
+
+
+----------------------------------------------------------------------
+
+Input:
+
+Two lists on two separate lines.
+
+The first line will have the list of scores of current team members
+
+The second line will have the list of scores of the applicants.
+
+
+
+Output:
+
+The list consisting of scores of the final team after hiring from the pool of applicants.
+
+
+
+----------------------------------------------------------------------
+
+Sample input:
+
+[23,45,34,76]
+
+[70,34,94]
+
+
+
+Sample output:
+
+[23, 45, 34, 76, 70, 94]
+
+
+Explanation:
+
+The first applicant has score 70, and the team average is 44.5 hence the applicant is hired making the team average 49.6
+
+The second applicant has score 34, and the team average is 49.6 hence the applicant is rejected keeping the team average same 49.6
+
+The third applicant has score 94, and the team average is 49.6 hence the applicant is hired making the team average 57
+
+
+
+----------------------------------------------------------------------
+
+Sample input:
+
+[10,20,30,40,50]
+
+[30,60,80,40]
+
+
+
+Sample output:
+
+[10, 20, 30, 40, 50, 60, 80]
+Execution Time Limit
+20 seconds
+
+
+            MY SOLUTION-
+            
+  import ast
+#you have to take input on your own here
+team_list = ast.literal_eval(input())
+applicant_list = ast.literal_eval(input())
+
+
+#write your code here
+def check_above_avg(data,check):
+    avg = sum(data)/len(data)
+    if avg < check:
+        return 1
+    else:
+        return 0
+    
+for applicant in applicant_list:
+    finalist = check_above_avg(team_list,applicant)
+    if finalist == 1:
+        team_list.append(applicant)
+
+print(team_list)
+    
+                              UPGRAD SOLUTION--
+                              
+#you have to take input on your own here
+
+import ast
+
+team = ast.literal_eval(input())
+applicant = ast.literal_eval(input())
+
+#write your code here
+def check_above_average(data, check):
+    # s=0
+    # for item in data:
+    #     s = s+ item
+    s = sum(data)
+    avg = s/len(data)    
+    if check > avg:
+        return 1
+    else:
+        return 0
+
+for appl in applicant:
+    is_add = check_above_average(team,appl)
+    if is_add==1:
+        team.append(appl)
+    
+print(team)
+
