@@ -1,0 +1,30 @@
+Array Operations
+How many different products are sold by the company in total?
+102
+
+✓ Correct
+Feedback:
+Since the lists have the details of all the products, you can find the number of products sold by calculating the number of elements in the list.
+Syntax: number.size [For this command, the list has to be converted into an array first]
+
+        Array Operations
+How many items were sold in total?
+
+490
+
+✓ Correct
+Feedback:
+The total number of items sold for each product will be the sum of the elements in the list ‘number’.
+Syntax: number.sum() [For this command, the list has to be converted to an array first.]
+
+
+                Array Operations
+What is the average price of the products sold by the e-commerce company?
+
+
+139
+
+✓ Correct
+Feedback:
+The average price of products will be the mean of the elements in the list ‘price’.
+Syntax: price.mean() [For this command, the list has to be converted to array first]
