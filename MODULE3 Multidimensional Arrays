@@ -1,0 +1,62 @@
+Slicing Arrays
+Which of the following would extract all the rows of the first 3 columns in a 2D array?
+
+array_name[ : , :3]
+✓ Correct
+Feedback:
+array_name[:,:3] extracts all the rows of the first 3 columns. Note that even though the first 3 columns have the indices 0, 1, and 2, respectively, we need to mention array_name[:,:3]instead of array_name[:,:2] since the last column index mentioned is not included, i.e., array_name[:,:2] will give you just the first two columns, i.e., 0 and 1.
+
+                                  Border Rows and Columns
+Description
+Extract all the border rows and columns from a 2-D array.
+
+Format:
+Input: A 2-D Python list
+Output: Four NumPy arrays - First column of the input array, first row of the input array, last column of the input array, last row of the input array respectively.
+
+Example:
+Input 1:
+[[11 12 13 14]
+ [21 22 23 24]
+ [31 32 33 34]]
+Output 1:
+[11 21 31]
+[11 12 13 14]
+[14 24 34]
+[31 32 33 34]
+Execution Time Limit
+15 seconds
+
+
+# For a video solution of the code, copy-paste the following link in your browser:
+# https://youtu.be/ekELUEdT63E
+
+# Read the input list
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+import numpy as np
+
+# Convert the input list to a NumPy array
+array_2d =np.array(input_list)
+
+# Extract the first column, first row, last column and last row respectively using
+# appropriate indexing
+col_1 = array_2d[:, 0]
+row_1 = array_2d[0, :]
+col_last = array_2d[:, -1]
+row_last = array_2d[-1, :]
+
+print(col_1)
+print(row_1)
+print(col_last)
+print(row_last)
+
+
+
+
+
+
+Additional Resouces:
+Here is a visual representation video on making arrays and understanding dimensions visually
+https://www.youtube.com/watch?v=vN5dAZrS58E
