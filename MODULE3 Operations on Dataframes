@@ -1,0 +1,49 @@
+Employee Training
+Description
+You are provided with the dataset of a company which has offices across three cities - Mumbai, Bangalore and New Delhi. The dataset contains the rating (out of 5) of all the employees from different departments (Finance, HR, Marketing and Sales). 
+
+
+
+The company has come up with a new policy that any individual with a rating equal to or below 3.5 needs to attend a training. Using dataframes, load the dataset and then derive the column ‘Training’ which shows ‘Yes’ for people who require training and ‘No’ for those who do not.
+
+
+
+Print the first 5 rows as the output. Refer to the image below for your reference.
+
+Note: You should not sort or modify values in other columns of the dataframe.
+
+Execution Time Limit
+15 seconds
+
+import numpy as np
+import pandas as pd
+
+# The file is stored at the following path:
+# 'https://media-doselect.s3.amazonaws.com/generic/NMgEjwkAEGGQZBoNYGr9Ld7w0/rating.csv'
+df = pd.read_csv('https://media-doselect.s3.amazonaws.com/generic/NMgEjwkAEGGQZBoNYGr9Ld7w0/rating.csv')
+
+# Provide your answer below
+df['Training'] = df['Rating'].apply(lambda x: 'No' if x >3.5 else 'Yes')
+
+print(df.head(5))
+
+
+
+
+                                        Dataframe
+ In the dataframe created above, find the department that has the most efficient team (the team with minimum percentage of employees who need training).
+
+
+HR
+
+✓ Correct
+Feedback:
+This is the correct answer. You have to divide the count of employees who do not need training in each department by the total employee count of the department. You can go through the syntax below for reference:
+
+for i in ['Finance', 'HR', 'Sales', 'Marketing']:
+    print(i, len(rating[(rating['Training'] == 'No') & (rating['Department'] == i)]) / len(rating[rating['Department'] == i]) * 100)
+    
+    
+    
+    
+                                                  
