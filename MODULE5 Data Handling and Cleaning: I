@@ -1,0 +1,52 @@
+Frequency of Mode
+Once you impute the missing values for Current Ver. as mentioned towards the end of the above video, answer the following question. If you’re having some difficulties in doing the same, check the feedback
+
+After the imputation step, how many values in Current Ver. are of the type “Varies with Device”?
+ 
+ 
+ 1419
+
+✓ Correct
+Feedback:
+Use the following code to replace the null values
+
+inp1['Current Ver'] = inp1['Current Ver'].fillna(inp1['Current Ver'].mode()[0])
+inp1['Current Ver'].isnull().sum()
+
+#After that do a value_counts()
+inp1['Current Ver'].value_counts()
+You’ll see that a total of 1419 values are 'Varies with Device'.
+ 
+
+Mode
+As you just learned, one way to impute missing values for the categorical variable is to use mode. Can you find which value occurs the maximum number of times?
+
+ 
+
+You will find the inbuilt mode functionality useful for this question. You may also use the value_counts() functionality of pandas Series.
+
+4.1 and above
+
+✓ Correct
+Feedback:
+Please continue the video for further explanation.
+
+Frequency of Mode
+You just now found out the mode of the categorical variable, what is the frequency it occurs with?
+
+2059
+✓ Correct
+Suggested Answer
+You can do this using value_counts(), this is one of the most used functionalities of pandas. Another workaround the same is to filter the data frame using the condition and then to find its length.
+
+len(inp1[inp1['Android Ver']=='4.1 and above'])
+
+Null Values
+Check the number of nulls in the dataframe again and find the total number of null values
+
+There are a total of 8 null values across all the columns.
+
+✓ Correct
+Feedback:
+Write inp1.isnull.sum() function once again. You should get 8 null values remaining.
+
