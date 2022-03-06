@@ -1,0 +1,43 @@
+Box Plot
+Find the interquartile range for the box plot created over the following list:
+list_1 = [48.49, 67.54, 57.47, 68.17, 51.18, 68.31, 50.33, 66.7, 45.62, 43.59, 53.64, 70.08, 47.69, 61.27, 44.14, 51.62, 48.72, 65.11]
+[Hint: use np.percentile to find the percentile values]
+ 
+
+
+48.55-66.30
+
+✓ Correct
+Feedback:
+This is the correct answer. The IQR can be calculated by finding the 25th and 75th percentile values.
+
+
+
+Types of Plots
+Which of the following plots can be used to show the relationship between two quantitative variables?
+
+1. Box plot
+2. Line plot
+3. Scatter plot
+4. Histogram
+
+2 and 3
+
+✓ Correct
+Feedback:
+Correct Answer! A line plot and a scatterplot essentially plot the x-y relationship between two quantitative variables. They show how one variable changes with respect to another quantitative variable. To find a relationship using a line plot, one additional step that you have to complete is to first sort the elements of x-axis.
+
+Deciding the Type of Plot to Use
+You have some data of credit card transactions. In this data, you're trying to find transaction values that are way outside the usual data range, in order to investigate some fraud.
+Which type of plot will you use in this case?
+ 
+ 
+ Box Plot
+
+✓ Correct
+Feedback:
+ A box plot will be helpful here as it easily segregates the values as outliers.
+ 
+ 
+ 
+ 
