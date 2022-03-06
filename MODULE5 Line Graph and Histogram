@@ -1,0 +1,25 @@
+Specifying Line Style
+Let's say 'x' and 'y' are two lists that you want to plot. You have initialised matplotlib.pyplot as plt. Now, you want to plot a blue line with cross (x) as markers for your points. What is the function call for this?
+For your reference, here is the official documentation of the Pyplot API.
+
+plt.plot(x, y, 'b', marker = 'x') plt.show()
+Feedback:
+The syntax for plotting a line graph is plt.plot(x_component, y-component, 'graph_features'). You have to specify the marker as a separate attribute to plot a line graph.
+
+
+Histogram
+You are provided with a list of weights of individuals stored as float:
+list_1 = [48.49, 67.54, 57.47, 68.17, 51.18, 68.31, 50.33, 66.7, 45.62, 43.59, 53.64, 70.08, 47.69, 61.27, 44.14, 51.62, 48.72, 65.11]
+
+You want to check which bucket has maximum entries when divided into the following four groups:
+
+[40-50)
+[50-60)
+[60-70)
+[70-80)
+Which code will help you find the correct answer? For your reference, here is the official documentation of the Pyplot API.
+
+plt.hist(list_1, bins = 4, range =[40, 80], edgecolor = 'white')
+✓ Correct
+Feedback:
+This is the correct answer. You are provided with four bars representing the desired ranges.
