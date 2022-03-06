@@ -1,0 +1,8 @@
+Telecom Data Analysis
+You saw an example of telecom data that contains customer-level information with variables such as contract type, prepaid/postpaid, payment method, average monthly bill amount and whether the person had churned (left the company) or not.
+
+Now suppose a client gave you this data and asked you, “What can you find out from this data set?”. Think about any two business problems that can be solved using this data. Write your answer in the space provided below.
+
+
+Suggested Answer
+There are two types of customers: prepaid/postpaid. You can find out which of these two types had more frequency of churning out. Also, you can find out which type of customers had churned with respect to their average monthly bill.
