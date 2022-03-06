@@ -1,0 +1,54 @@
+Facts and Dimensions
+Consider a bank having thousands of ATMs across India. In every transaction, the following variables are recorded:
+
+Withdrawal amount
+Account balance after withdrawal
+Transaction charge amount
+Customer ID
+ATM ID
+Date of withdrawal
+Which among the following are fact variables (mark all that apply)?
+
+
+Withdrawal amount
+
+✓ Correct
+Feedback:
+Fact variable: It is numerical data
+
+
+Account balance after a withdrawal
+
+✓ Correct
+Feedback:
+ Fact variable: it is numerical data
+
+
+Transaction fee
+
+✓ Correct
+Feedback:
+ Fact variable: It is numerical data
+ 
+ 
+ 
+ 
+ 
+ Dimensional Modelling
+What are the benefits of having dimension variables apart from facts?
+
+More than one option may be correct.
+
+
+Performing various types of analyses, such as sector-wise, country-wise or funding type-wise analyses.
+
+✓ Correct
+Feedback:
+This activity needs metadata along with the fact data.
+
+
+Extracting specific, useful information such as the total investment made in the automobile sector in India between 2014 and 2015.
+
+✓ Correct
+Feedback:
+ This activity needs metadata along with the fact data.
