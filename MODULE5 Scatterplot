@@ -1,0 +1,29 @@
+Scatterplot
+Select the cases where a scatterplot would be helpful in generating insights.
+(More than option one can be correct.)
+
+
+To check whether a relationship exists between the age of a person and their income.
+
+✓ Correct
+Feedback:
+A scatterplot shows the relationship between two sets of data. Hence, this is the correct option.
+
+
+To check whether stock prices are positively related to the profit of a company.
+
+✓ Correct
+Feedback:
+Since a scatterplot helps to visualise the relationship between two sets of data, it also reveals whether they are related positively or negatively.
+
+
+
+Scatterplot
+Which attribute helps set the transparency of points in a scatterplot?
+Check the Maptlotlib documentation for scatterplots.
+
+alpha
+
+✓ Correct
+Feedback:
+This is the correct attribute. You can assign a value between 0 (transparent) and 1 (opaque).
