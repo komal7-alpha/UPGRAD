@@ -1,0 +1,20 @@
+Bar Graph
+How will you change the width of the bars in a bar graph?
+Check the Maptlotlib documentation for bar graphs.
+
+matplotlib.pyplot.bar(x, y, width = 0.8)
+✓ Correct
+Feedback:
+'width' is the correct attribute for changing the width of the bars in a bar graph.
+
+
+
+Bar Graph
+Is it possible to have a separate colour for each category in a bar graph?
+
+
+Yes
+
+✓ Correct
+Feedback:
+Colours can be provided as a list to the matplotlib.pyplot.bar function under the attribute ‘color’.: matplotlib.pyplot.bar(x, y, color = [‘red’, ‘blue’, ‘green’]) [Note: if there are more than three bars, the colours will start repeating themselves.]
