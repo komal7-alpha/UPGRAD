@@ -1,0 +1,10 @@
+
+Target Variable
+In the world of machine learning, the target variable is defined as the variable or column in a dataset whose value is to be predicted or analysed by using the other variables in the same dataset. For our case study, can you guess which of the following is the target variable?
+
+Rating
+
+✓ Correct
+Feedback:
+You want to analyse the data set to find out the features that determine whether an app is performing well or not in ratings. Therefore, the Rating column is our target variable. You’ll be analysing the way the rating varies across different categories of other variables to determine the most important indicators for the high-performing apps.
+
