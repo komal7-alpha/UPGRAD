@@ -1,0 +1,7 @@
+Arrays of Plots
+As you learnt, in plt.subplot(), the numbering starts from the top-left element of the grid and moves rightward along each row. Out of the following subplots, which one does NOT represent a plot that is part of the second column from the left in the array of subplots?
+
+plt.subplot(3,3,7)
+✓ Correct
+Feedback:
+This is the correct answer as the code represents row 3, column 1.
