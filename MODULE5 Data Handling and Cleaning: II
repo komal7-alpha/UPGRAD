@@ -8,22 +8,18 @@ Some error comes up while calculating the value
 Feedback:
 Observe that Price is of an object datatype. If you try to solve this problem directly without converting it into a float, then it would show up an error.
 
-Frequency of Mode
-Once you impute the missing values for Current Ver. as mentioned towards the end of the above video, answer the following question. If you’re having some difficulties in doing the same, check the feedback
 
-After the imputation step, how many values in Current Ver. are of the type “Varies with Device”?
- 
- 
- 1419
+
+
+Fixing the Installs column.
+
+After removing the additional symbols in the Installs column, calculate the approximate number of installs at the 50th percentile.
+
+[Hint - You can use the replace() function here. Check this link to understand how to use it.]
+
+
+500,000
 
 ✓ Correct
 Feedback:
-Use the following code to replace the null values
-
-inp1['Current Ver'] = inp1['Current Ver'].fillna(inp1['Current Ver'].mode()[0])
-inp1['Current Ver'].isnull().sum()
-
-#After that do a value_counts()
-inp1['Current Ver'].value_counts()
-You’ll see that a total of 1419 values are 'Varies with Device'.
- 
+Please check the video solution.
